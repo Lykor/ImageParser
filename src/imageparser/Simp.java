@@ -37,17 +37,7 @@ public class Simp {
         readLine = in.readLine();
         while (readLine != null) {
             result.append(readLine);
-            for (String s:readLine.split("\\.(png|jpe?g|gif)")
-                 ) {
-                for (String a:s.split("\"")
-                     ) {
-                    Pattern patternUrl = Pattern.compile("(https?://)");
-                    Matcher matcher = patternUrl.matcher(a);
-                    if(matcher.find()){
-                        System.out.println(a);
-                    }
-                }
-            }
+
             readLine = in.readLine();
         }
         in.close();
